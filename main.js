@@ -1,12 +1,12 @@
-const rating_cards = document.querySelectorAll(".ratings span");
-const submit_btn = document.querySelector(".submit-btn");
-const rate_point = document.getElementById("rate");
-const rating_section = document.querySelector(".rating-section");
-const thank_section = document.querySelector(".thank-section");
+const ratingCards = document.querySelectorAll(".ratings span");
+const submitBtn = document.querySelector(".submit-btn");
+const ratePoint = document.getElementById("rate");
+const ratingSection = document.querySelector(".rating-section");
+const thankSection = document.querySelector(".thank-section");
 let rate = null;
 
-rating_cards.forEach((rating_card) => {
-  rating_card.addEventListener("click", (e) => {
+ratingCards.forEach((ratingCard) => {
+  ratingCard.addEventListener("click", (e) => {
     const active = document.querySelector(".checked");
     if (active) {
       active.classList.remove("checked");
@@ -18,10 +18,10 @@ rating_cards.forEach((rating_card) => {
   });
 });
 
-submit_btn.addEventListener("click", () => {
+submitBtn.addEventListener("click", () => {
   if (rate) {
-    rate_point.innerText = rate;
-    rating_section.classList.add("hidden");
-    thank_section.classList.remove("hidden");
+    ratePoint.innerText = rate;
+    ratingSection.classList.add("hidden");
+    thankSection.classList.remove("hidden");
   }
 });
